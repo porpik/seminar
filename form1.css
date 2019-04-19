@@ -1,0 +1,64 @@
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form{
+  padding: 40px;
+  margin: 40px;
+  height: 100px;
+  width: 750px;
+  border: 1px;
+}
+
+input[type=submit] {
+  width: 30%;
+  background-color: #4CAF52;
+  color: #f4f4f4;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #001f4d;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+
+}
+.container{
+  text-align: center;
+  width: 600px;
+  margin: auto;
+  background: skyblue;
+  margin-top: 20px; 
+  padding: 10px;
+  font-family: sans-serif;
+  text-align: center;
+
+}
+input{
+  padding: 8px;
+  margin:5px;
+  border-radius: 10px;
+  border: none;
+}
+input[type = text], [type = date],[type = password], [type = email], [type = number], [type = select]
+  {
+    width:95%;
+  }
+input:focus
+{
+background-color:#ffff99;
+}

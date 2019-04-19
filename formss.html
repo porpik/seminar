@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Register for free</title>
+
+	<link rel="stylesheet" type="text/css" href="form1.css">
+	
+</head>
+<body bgcolor="#f4f4f4" align="center">
+
+<form name="myForm" action="prop.php" onsubmit="return validateForm()" method="POST" align="center">
+	
+<div class="container">
+	<marquee behavior="scroll" direction="right" scrollamount="5" onmouseover="this.stop()" onmouseout="this.start()">
+
+	<h1>Register<font color="green"></font></h1>
+
+</marquee>
+
+			<label for="fname">First Name</label>
+			<input type="text" name="fname" placeholder="Enter First name" id="fname" onblur="myFunction()" autofocus="">
+  <script>
+function myFunction() {
+  var fname = document.getElementById("fname");
+  fname.value = fname.value.toUpperCase();
+}
+</script>
+
+<label for="lname">Last Name</label>
+		<input type="text" name="lname" placeholder="Enter Last name" id="lname" onblur="myFunction()">
+		<script>
+function myFunction() {
+  var x = document.getElementById("lname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+	
+		<label for="username">Username</label>
+		<input type="text" name="username" name="username" placeholder="username" id="username" align="center">
+	
+	  <label for="gender">Gender:</label>
+	<label for="male"> Male</label>
+	<input type="radio" name="gender" value="Male"> 
+	<label for="female"> Female</label>
+	<input type="radio" name="gender" value="female">
+	<label for="Other">Other</label>
+	<input type="radio" name="gender" value="Other"> 
+	  <br>
+	 	<label for="dateofbirth">Date of Birth</label>
+	 	<input type="date" name="dateofbirth" id="dateofbirth">
+	
+		<label for="idnumber"> ID Number</label>
+		<input type="number" name="idnumber" id="idnumber" placeholder="12345678">
+	 
+		<label for="county">County of Birth</label>
+		<select name="county">
+		<option value="county"><selected> Choose county</option>
+		<option value="">Kisii</option>
+		<option value="">migori</option>
+		<option value="">kisumu</option>
+		<option value="">kericho</option>
+		<option value="">nakuru</option>
+		<option value="">nairobi</option>
+		<option value="">narok</option>
+		<option value="">wajir</option>
+		<option value="">mandera</option>
+		<option value="">meru</option>
+		<option value="">nyeri</option>
+		<option value="">vihiga</option>
+		<option value="">nandi</option>
+		<option value="">baringo</option>
+		<option value="">tana river</option>
+	</select>
+	<br>
+		<label for="phone"> Phone Number</label>
+		<input type="number" name="phonenum" id="phonenum" placeholder="+254712345678">
+		
+	
+		<label for="email">Enter email address</label>
+		<input type="email" name="email" id="email" placeholder="Enter email address">
+	
+		<label for="password">Enter password</label>
+		<input type="password" name="password" id="password" placeholder="Enter Password">
+	
+		<label for="passwordrpt"> Confirm Password</label>
+		<input type="password" name="passwordrpt" id="passwordrpt" placeholder="Repeat password">
+	
+		<input type="submit" name="register" value="Complete Registration">
+	</div>
+</form>
+<script>
+function validateForm() {
+  var fname = document.forms["myForm"]["fname"].value;
+  var lname = document.forms["myForm"]["lname"].value;
+  var username = document.forms["myForm"]["username"].value;
+  var gender = document.forms["myForm"]["gender"].value;
+  var dateofbirth = document.forms["myForm"]["dateofbirth"].value;
+  var phonenum = document.forms["myForm"]["phonenum"].value;
+  var email	= document.forms["myForm"]["email"].value;
+  var password	= document.forms["myForm"]["password"].value;
+  var passwordrpt = document.forms["myForm"]["passwordrpt"].value;
+  var idnumber	= document.forms["myForm"]["idnumber"].value;
+
+
+
+
+  if ( fname == "") {
+    alert("Enter your First Name");
+    document.myForm.fname.focus() ;            
+    return false;
+  }
+  if (lname == "") {
+  	alert(" Enter your last name");
+  	document.myForm.lname.focus();            
+  	return false;
+  }
+  if ( username == "") {
+    alert("Enter your Username");
+    document.myForm.username.focus() ;            
+    return false;
+  }
+  if (gender == "") {
+  	alert("Please choose your gender");
+  	return false;
+  }
+  if (dateofbirth = "") {
+  	alert("Choose your Date of Birth");
+  	return false;
+  }
+  if ( idnumber == "") {
+    alert("Enter your ID Number");
+    document.myForm.idnumber.focus();
+    return false;
+  }
+  if (phonenum == "") {
+  	alert("Please enter your Phone Number");
+  	document.myForm.phonenum.focus();
+  	return false;
+  }
+  if (email == "") {
+  	alert("enter your email address");
+  	document.myForm.email.focus();
+  	return false;
+  }
+  if (password == "") {
+  	alert("create your password");
+  	document.myForm.password.focus();
+  	return false;
+  }
+  if (passwordrpt == "") {
+  	alert("confirm password");
+  	document.myForm.passwordrpt.focus();
+  	return false;
+  }
+  if (password != passwordrpt) {
+  	alert("Password do not match");
+  	document.myForm.passwordrpt.focus();
+  	return false;
+  }
+}
+</script>
+</body>
+</html>
